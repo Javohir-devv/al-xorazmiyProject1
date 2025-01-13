@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+*{
+    font-family: "Oswald", serif;
+    margin: 0 ;
+    padding: 0;
+}
+body{
+    background-color: black;
+}
+
+.box{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates three equal columns */
+    gap: 20px; /* Gap between grid items */
+    width: 1440px;
+    margin: 0 auto;
+
+}
+h1{
+    text-align: center;
+    color: white;
+    margin:  100px;
+}
+h1 {
+    font-family: 'Poppins', sans-serif; /* Modern font */
+    font-size: 4rem; /* Larger text for the heading */
+    font-weight: 700; /* Bold font */
+    text-transform: uppercase; /* All caps for emphasis */
+    text-align: center; /* Center the text */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6), 0 0 25px rgba(255, 165, 35, 0.6); /* Subtle shadow and glowing effect */
+    letter-spacing: 2px; /* Slightly spaced letters for readability */
+    
+}
+h1 span{
+    display: inline-block;
+    font-family: "Dancing Script", serif;
+}
+
+.play {
+    width: 450px;
+    height: 280px;
+    border-radius: 15px;
+    background-image: url("img/simple.jpg");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden; /* Prevent content overflow */
+}
+
+/* Add an overlay for a transparent background */
+.play::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent overlay */
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    z-index: -1; /* Ensure the overlay stays behind the content */
+    transition: all .5s;
+}
+
+.play li {
+    background-color: rgba(0, 0, 0, 0.492);
+    height: 100%;
+    border-radius: 10px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 40px;
+    list-style: none;
+}
+.play a{
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+
+}
+
+.play:hover.play::before {
+    background-color: rgba(0, 0, 0, 0) ;
+    backdrop-filter: blur(0px);
+}
+
+.play li:hover{
+    background-color: rgba(0, 0, 0, 0.305);
+}
+.present:hover{
+    background-color: rgba(0, 0, 0, 0.489);
+}
+
+
+
+
